@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+:root {
+  --ff-primary: "Segoe UI", "sans-serif";
+  --base: #fbfbfb;
+  --text: #212121;
+  --form-control-bg: #fbfbfb;
+  --hover-bg: rgb(230, 230, 230);
+}
+
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $category, $font-sizes in $type-scale {
+    @each $size, $value in $font-sizes {
+      --fs-#{$category}-#{$size}: #{$value};
+    }
+  }
+}

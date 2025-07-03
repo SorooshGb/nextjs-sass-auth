@@ -1,0 +1,133 @@
+.card {
+  width: min(500px, 95%);
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.loginContainer {
+  position: relative;
+  width: min(430px, 85%);
+  background-color: var(--clr-neutral-100);
+  border-radius: 16px;
+  margin-block: 16px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.623);
+    filter: blur(10px);
+  }
+}
+
+.form {
+  padding: 48px 32px;
+}
+
+.formHeader {
+  margin-bottom: 60px;
+  text-align: center;
+
+  h1 {
+    color: var(--clr-neutral-900);
+    font-size: clamp(1.4rem, 3vw + 0.5rem, 1.6rem);
+    margin-bottom: 5px;
+    user-select: none;
+  }
+
+  p {
+    color: var(--clr-red-400);
+    height: 22px;
+  }
+}
+
+.blankUser {
+  display: block;
+  width: max(40%, 100px);
+  height: auto;
+  border-radius: 50%;
+  margin-inline: auto;
+  margin-bottom: 1.8rem;
+}
+
+.form div:last-of-type {
+  margin: 0;
+}
+
+.submitBtn {
+  display: block;
+  position: relative;
+  isolation: isolate;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 90%;
+  background-color: rgb(126, 192, 201);
+  padding: 0.8em;
+  border-radius: 100vh;
+  margin-inline: auto;
+  margin-top: 4rem;
+  box-shadow: 0 0 8px rgba(42, 93, 100, 0.3);
+  overflow: hidden;
+  transition: color 0.15ms 200ms, text-shadow 0.15s 200ms, scale 150ms;
+
+  &:focus-visible {
+    outline: 1px solid black;
+  }
+
+  &:hover {
+    color: white;
+    text-shadow: 0 0 10px rgb(255 255 255 / 0.9);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(5, 64, 65) 90%, rgb(1, 26, 37));
+    border-radius: inherit;
+    transition: transform 0.7s;
+  }
+
+  &::before {
+    transform: translateX(-105%);
+  }
+
+  &::after {
+    transform: translateX(105%);
+  }
+
+  &:not(:disabled):active {
+    scale: 0.95;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      transform: translateX(0);
+    }
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.swapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  place-items: center;
+}

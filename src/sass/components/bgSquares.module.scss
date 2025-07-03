@@ -1,0 +1,27 @@
+.bgSquare {
+  position: fixed;
+  top: 0;
+  width: max(32vw, 300px);
+  aspect-ratio: 1 / 1;
+  background-color: rgba(235, 235, 235, 0.048);
+  border-radius: 5px;
+  transform-origin: center;
+  rotate: 45deg;
+}
+
+.square1 {
+  left: 0;
+  transform: translateX(-60%);
+}
+
+.square2 {
+  right: 0;
+  transform: translate(50%, -20%);
+}
+
+.square3 {
+  top: unset;
+  left: 0;
+  bottom: 0;
+  transform: translate(10%, 60%);
+}
