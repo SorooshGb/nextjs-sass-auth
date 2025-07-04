@@ -15,5 +15,5 @@ export default function HomePage() {
     }
   }, [isAuthenticated, loading, protect, router]);
 
-  return null;
+  return <h1 style={{ margin: 16 }}>Loading...</h1>;
 }

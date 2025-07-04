@@ -17,7 +17,8 @@ export default function AuthPage() {
     }
   }, [loading, isAuthenticated, router]);
 
-  if (loading || isAuthenticated) return null;
+  if (loading || isAuthenticated)
+    return <h1 style={{ margin: 16 }}>Loading...</h1>;
 
   return (
     <div className={styles.loginPageBody}>

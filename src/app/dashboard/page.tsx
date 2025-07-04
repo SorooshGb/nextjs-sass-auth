@@ -18,7 +18,8 @@ export default function DashboardPage() {
     router.push("/auth");
   }
 
-  if (loading || !isAuthenticated) return null;
+  if (loading || !isAuthenticated)
+    return <h1 style={{ margin: 16 }}>Loading...</h1>;
 
   return (
     <div>
